@@ -36,3 +36,19 @@ footer{display:flex;gap:30px;flex-wrap:wrap;padding:40px 5vw;font-size:15px;bord
 @media(max-width:860px){.burger{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;padding:24px 5vw;background:#fff;border-bottom:1px solid var(--line)}nav.open{display:flex}
 .split,.quote,form{grid-template-columns:1fr}.services li{grid-template-columns:1fr;gap:10px}.steps,.pillars{grid-template-columns:1fr}section{padding:72px 5vw}.hero{min-height:80vh}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Laptop and desktop layout only. Phones (860px and below) are not affected. */
+@media(min-width:861px){
+ .nav,footer,section{padding-left:max(5vw,calc((100vw - 1240px)/2));padding-right:max(5vw,calc((100vw - 1240px)/2))}
+ h1{font-size:clamp(56px,7vw,112px);max-width:16ch;line-height:1.02}
+ .hero{min-height:82vh}
+ .hero-foot{border-top:1px solid var(--line);padding-top:32px}
+ .split h2{max-width:14ch}
+ .services{display:grid;grid-template-columns:repeat(3,1fr);column-gap:48px;border-top:0}
+ .services li{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:32px 0 40px;border-top:2px solid var(--ink);border-bottom:0}
+ .services li:hover{padding-left:0}
+ .services h3{font-size:30px}
+ .pillars{gap:64px}
+ #faq{display:grid;grid-template-columns:1fr 1.6fr;column-gap:6vw}
+ #faq h2{grid-column:1;grid-row:1/5;margin-bottom:0}
+ #faq details{grid-column:2;max-width:none}
+}
