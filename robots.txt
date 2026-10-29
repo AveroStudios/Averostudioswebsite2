@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://averostudios.co.za/sitemap.xml
